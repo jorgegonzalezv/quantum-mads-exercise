@@ -119,7 +119,7 @@ for charging_station_idx in range(N_CHARGING_STATIONS):
     constraints_matrix[constraint_idx, to_S_idxs[charging_station_idx]] = 1
     bound_lower[constraint_idx] = CHARGING_STATIONS_DEMAND[
         charging_station_idx
-    ]  #  TODO ? demanda puede superarse?
+    ]
     bound_upper[constraint_idx] = CHARGING_STATIONS_DEMAND[charging_station_idx]
     constraint_idx += 1
 
