@@ -130,7 +130,7 @@ for deposit_station_idx in range(N_DEPOSIT_STATIONS):
     bound_upper[constraint_idx] = DEPOSIT_STATIONS_PRODUCTION[deposit_station_idx]
     constraint_idx += 1
 
-# 5. TODO por aqui INITIAL CAPACITY (poner nombres explicitos)
+# 5. only move current present at (t-1)
 for storage_idx in range(N_STORAGES):
     constraints_matrix[constraint_idx, from_D_idxs[storage_idx]] = 1
     bound_lower[constraint_idx] = STORAGE_INITIAL_CONTAINERS
