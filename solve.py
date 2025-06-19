@@ -14,7 +14,7 @@ TERMINAL_MAX_CAPACITY = 5
 STORAGE_MAX_CAPACITY = 5
 TERMINAL_INITIAL_CONTAINERS = 1
 STORAGE_INITIAL_CONTAINERS = 1
-TERMINAL_2_DEMAND = 2
+TERMINAL_TWO_DEMAND = 2
 CHARGING_STATIONS_DEMAND = np.array([1, 1])
 DEPOSIT_STATIONS_PRODUCTION = np.array([1, 1, 1])
 
@@ -110,7 +110,7 @@ for T_idxs_idx in range(N_TERMINALS):
     bound_lower[constraint_idx] = 0
     bound_upper[constraint_idx] = TERMINAL_MAX_CAPACITY
     if T_idxs_idx + 1 == 2:
-        bound_lower[constraint_idx] = TERMINAL_2_DEMAND
+        bound_lower[constraint_idx] = TERMINAL_TWO_DEMAND
 
     constraint_idx += 1
 
